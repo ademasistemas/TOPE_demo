@@ -1611,4 +1611,6 @@ header {
       margin: 0 auto;
     }
   }
-  
+  .bottom-nav a {
+    text-decoration: none;
+}
