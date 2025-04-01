@@ -1,0 +1,1550 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    padding-bottom: 70px; /* Espacio para la navegación inferior */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+}
+
+.search-icon {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Feed principal */
+.feed {
+    padding: 10px;
+}
+
+/* Tarjeta de emprendedor - Estilos generales */
+.entrepreneur-card {
+    background-color: #fff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    padding: 15px;
+}
+
+.profile-header h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.category-icon {
+    margin-right: 5px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.stars {
+    color: #FFD700;
+    margin-right: 5px;
+}
+
+.location-delivery {
+    display: flex;
+    flex-direction: column;
+    color: #666;
+    font-size: 14px;
+}
+
+.location {
+    margin-right: 10px;
+}
+
+/* Estilos para María's Cakes - Pastelería */
+.bakery .profile-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.bakery .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bakery .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.bakery .product {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.bakery .product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.bakery .product-info {
+    padding: 10px;
+}
+
+.bakery .product-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.bakery .price {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos para Nova Apparel - Ropa */
+.clothing .profile-header.horizontal {
+    display: flex;
+    align-items: center;
+}
+
+.clothing .profile-image-small {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.clothing .profile-image-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clothing .profile-info {
+    flex: 1;
+}
+
+.clothing .rating-category {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.clothing .rating-number {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.clothing .dot {
+    margin: 0 5px;
+}
+
+.clothing .follow-button {
+    background-color: #5D4B8C;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 0 15px 15px;
+    font-weight: bold;
+}
+
+.clothing .featured-product {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.clothing .featured-product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clothing .product-grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+    padding: 5px;
+}
+
+.clothing .product-grid-2x2 .product,
+.clothing .product-grid-2x2 .product-video {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.clothing .product-grid-2x2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clothing .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clothing .play-button i {
+    color: #333;
+    font-size: 20px;
+}
+
+/* Estilos para Sofía Boutique - Productos de mujer */
+.womens-products .profile-header.with-image {
+    display: flex;
+    padding: 20px;
+}
+
+.womens-products .profile-image-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.womens-products .profile-image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.womens-products .profile-info-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.womens-products .location-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 15px;
+    color: #666;
+}
+
+.womens-products .section-title {
+    padding: 0 20px 10px;
+    font-size: 20px;
+}
+
+.womens-products .product-carousel {
+    padding: 0 0 20px;
+}
+
+.womens-products .carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0 20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.womens-products .carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.womens-products .carousel-item {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 15px;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+.womens-products .carousel-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.womens-products .carousel-item h4 {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+.womens-products .carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.womens-products .carousel-nav span {
+    width: 8px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.womens-products .carousel-nav span.active {
+    background-color: #333;
+}
+
+/* Estilos para Panadería Don Pedro */
+.bakery-alt .profile-header.centered {
+    text-align: center;
+    padding: 20px;
+}
+
+.bakery-alt .rating-category-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.bakery-alt .category-pill {
+    background-color: #f8e6d8;
+    color: #b07d62;
+    padding: 5px 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.bakery-alt .category-pill i {
+    margin-right: 5px;
+}
+
+.bakery-alt .tabs {
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+.bakery-alt .tab {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    color: #666;
+    font-weight: 500;
+}
+
+.bakery-alt .tab.active {
+    color: #b07d62;
+    border-bottom: 2px solid #b07d62;
+}
+
+.bakery-alt .product-list {
+    padding: 15px;
+}
+
+.bakery-alt .product-row {
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.bakery-alt .product-row:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.bakery-alt .product-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.bakery-alt .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bakery-alt .product-details {
+    flex: 1;
+}
+
+.bakery-alt .product-details h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.bakery-alt .description {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.bakery-alt .add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #b07d62;
+    color: white;
+    border-radius: 50%;
+    align-self: center;
+}
+
+/* Estilos para Ferretería El Tornillo */
+.hardware .profile-header.with-banner {
+    padding: 0;
+    position: relative;
+}
+
+.hardware .banner {
+    height: 120px;
+    overflow: hidden;
+}
+
+.hardware .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hardware .profile-overlay {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-top: -30px;
+}
+
+.hardware .profile-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    border: 3px solid white;
+    margin-right: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hardware .profile-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hardware .location-info-pill {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 0 15px 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.hardware .location-info-pill i {
+    margin-right: 5px;
+    color: #e74c3c;
+}
+
+.hardware .location-info-pill .dot {
+    margin: 0 5px;
+}
+
+.hardware .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 15px 15px;
+}
+
+.hardware .category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hardware .category-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.hardware .category-icon i {
+    font-size: 20px;
+    color: #e74c3c;
+}
+
+.hardware .category-item span {
+    font-size: 12px;
+}
+
+.hardware .section-title {
+    padding: 0 15px 10px;
+    font-size: 18px;
+}
+
+.hardware .product-horizontal-scroll {
+    padding: 0 0 15px;
+    overflow: hidden;
+}
+
+.hardware .scroll-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 15px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hardware .scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.hardware .product-card {
+    flex: 0 0 auto;
+    width: 150px;
+    margin-right: 15px;
+    position: relative;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.hardware .product-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.hardware .product-card h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.hardware .discount-badge {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+.hardware .old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+    border-top: 1px solid #eee;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.nav-item i {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.nav-item.active {
+    color: #5D4B8C;
+}
+
+.nav-item:hover {
+    color: #5D4B8C;
+}
+
+
+/* Responsive */
+@media (min-width: 768px) {
+    .feed {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+.barber-service .profile-banner img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 3px solid #333;
+}
+
+.barber-service .profile-info-barber {
+    padding: 15px;
+    text-align: center;
+}
+
+.barber-service .profile-info-barber h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.barber-service .profile-info-barber .category {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.barber-service .profile-info-barber .rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.barber-service .location {
+    color: #666;
+    font-size: 13px;
+}
+
+.barber-service .service-list {
+    padding: 10px 20px;
+}
+
+.barber-service .service-item {
+    background-color: #f3f3f3;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.barber-service .service-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.barber-service .booking-btn {
+    background-color: #333;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 30px;
+    margin: 15px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.eco-shop .eco-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.eco-shop .eco-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #8bc34a;
+    background-color: #f0f9f0;
+}
+
+.eco-shop .eco-info h2 {
+    font-size: 20px;
+    margin-bottom: 4px;
+    color: #4CAF50;
+}
+
+.eco-shop .eco-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 2px 0;
+}
+
+.eco-shop .rating {
+    font-size: 14px;
+    color: #FFD700;
+}
+
+.eco-shop .eco-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px 15px 20px;
+}
+
+.eco-shop .eco-product {
+    background-color: #f3f9f3;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.eco-shop .eco-product img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.eco-shop .eco-product h4 {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.eco-shop .eco-product p {
+    font-size: 13px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+
+
+
+.dentist-service .dentist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #ffffff, #ffffff);
+    padding: 20px;
+}
+
+.dentist-service .dentist-info h2 {
+    font-size: 22px;
+    color: #1976d2;
+    margin-bottom: 5px;
+}
+
+.dentist-service .specialty {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.dentist-service .rating {
+    font-size: 14px;
+    color: #fbc02d;
+    margin-bottom: 5px;
+}
+
+.dentist-service .location {
+    font-size: 13px;
+    color: #666;
+}
+
+.dentist-service .dentist-avatar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    object-fit: cover;
+}
+
+.dentist-service .available-services {
+    padding: 15px 20px;
+    background-color: #ffffff;
+}
+
+.dentist-service .available-services h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #1976d2;
+}
+
+.dentist-service .available-services ul {
+    list-style: none;
+}
+
+.dentist-service .available-services li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.dentist-service .appointment-button {
+    background-color: #1976d2;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 30px;
+    margin: 15px 20px;
+    cursor: pointer;
+}
+
+
+.mechanic-service .mechanic-banner img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.mechanic-service .mechanic-info {
+    padding: 15px;
+    background-color: #f2f2f2;
+}
+
+.mechanic-service .mechanic-info h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #424242;
+}
+
+.mechanic-service .category {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.mechanic-service .rating {
+    font-size: 14px;
+    color: #FFD700;
+    margin-bottom: 5px;
+}
+
+.mechanic-service .location {
+    font-size: 13px;
+    color: #555;
+}
+
+.mechanic-service .mechanic-services {
+    padding: 15px;
+}
+
+.mechanic-service .service-icon-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.mechanic-service .icon-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    color: #333;
+}
+
+.mechanic-service .icon-label i {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #424242;
+}
+
+.mechanic-service .quote-button {
+    background-color: #212121;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 30px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.graphic-design .graphic-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(90deg, #e0f7fa, #ffffff);
+}
+
+.graphic-design .graphic-logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.graphic-design .graphic-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.graphic-design .graphic-info h2 {
+    font-size: 20px;
+    margin-bottom: 3px;
+    color: #006064;
+}
+
+.graphic-design .category {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.graphic-design .rating {
+    font-size: 14px;
+    color: #FFD700;
+}
+
+.graphic-design .location {
+    font-size: 13px;
+    color: #555;
+}
+
+.graphic-design .carousel-title {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #006064;
+}
+
+.graphic-design .graphic-carousel {
+    padding: 0 0 20px;
+}
+
+.graphic-design .carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0 15px;
+    gap: 15px;
+}
+
+.graphic-design .carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.graphic-design .carousel-item {
+    flex: 0 0 auto;
+    width: 160px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    scroll-snap-align: start;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.graphic-design .carousel-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.graphic-design .carousel-item h4 {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.graphic-design .carousel-item p {
+    font-size: 13px;
+    color: #00796b;
+}
+
+
+
+
+.points-bingo {
+    background: #f0f4ff;
+    border: 2px solid #90caf9;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.1);
+    text-align: center;
+}
+
+.points-bingo .game-title {
+    font-size: 18px;
+    color: #1976d2;
+    margin-bottom: 8px;
+}
+
+.points-bingo .game-instructions {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.bingo-carousel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-bottom: 15px;
+}
+
+.bingo-track {
+    display: flex;
+    gap: 10px;
+    padding: 5px 10px;
+}
+
+.bingo-cell {
+    flex: 0 0 auto;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border: 2px dashed #1976d2;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1976d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+}
+
+.btn-spin-points {
+    background-color: #1976d2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-spin-points:hover {
+    background-color: #0d47a1;
+}
+
+
+
+
+
+.kiosk-machine {
+    background: #fff9f0;
+    color: #333;
+    border: 3px solid #ffb300;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #ffd54f99;
+    padding: 15px;
+}
+
+.kiosk-machine .kiosk-screen {
+    background: #fff3e0;
+    border: 2px solid #ffe082;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.kiosk-machine .kiosk-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kiosk-machine .kiosk-header h2 {
+    font-size: 22px;
+    color: #fb8c00;
+    font-weight: bold;
+}
+
+.kiosk-machine .rating {
+    font-size: 14px;
+    color: #fbc02d;
+}
+
+.kiosk-machine .location {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.kiosk-machine .kiosk-carousel {
+    margin-top: 15px;
+    overflow-x: auto;
+}
+
+.kiosk-machine .carousel-track {
+    display: flex;
+    gap: 12px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+}
+
+.kiosk-machine .carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.kiosk-machine .snack-item {
+    flex: 0 0 auto;
+    width: 120px;
+    background-color: #ffffff;
+    border: 2px solid #ffe082;
+    border-radius: 12px;
+    text-align: center;
+    padding: 10px;
+    scroll-snap-align: start;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.kiosk-machine .snack-item img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+.kiosk-machine .snack-item p {
+    font-size: 13px;
+    color: #444;
+}
+
+.kiosk-machine .snack-item strong {
+    color: #ff6f00;
+}
+
+.kiosk-machine .kiosk-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.kiosk-machine .btn-order,
+.kiosk-machine .btn-points {
+    flex: 1;
+    background-color: #ffb300;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background 0.3s;
+}
+
+.kiosk-machine .btn-order:hover {
+    background-color: #ffa000;
+}
+
+.kiosk-machine .btn-points {
+    background-color: #ffe082;
+    color: #444;
+}
+
+.kiosk-machine .btn-points:hover {
+    background-color: #ffecb3;
+}
+
+
+
+
+.coin-roulette {
+    background: #fff8e1;
+    border: 2px solid #ffca28;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(255, 202, 40, 0.1);
+}
+
+.coin-roulette .game-title {
+    font-size: 18px;
+    color: #f57f17;
+    margin-bottom: 8px;
+}
+
+.coin-roulette .game-instructions {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.roulette-wheel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.roulette-wheel .slice {
+    background-color: #fffde7;
+    border: 2px solid #ffca28;
+    border-radius: 10px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #f57f17;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.btn-spin-coins {
+    background-color: #fbc02d;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-spin-coins:hover {
+    background-color: #f9a825;
+}
+
+
+
+.ad-spot {
+    background: #fff;
+    border: 2px dashed #5D4B8C;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(93, 75, 140, 0.1);
+}
+
+.ad-video-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 2px solid #5D4B8C;
+}
+
+.ad-video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ad-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.ad-content h3 {
+    font-size: 18px;
+    color: #5D4B8C;
+    margin-bottom: 10px;
+}
+
+.ad-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn-cta-ad {
+    background-color: #5D4B8C;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.btn-cta-ad:hover {
+    background-color: #3e3169;
+}
+
+
+
+
+.furniture-showcase {
+    height: 500px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.furniture-hero {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Fondo con desvanecimiento hacia la derecha */
+.furniture-bg {
+    flex: 1;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(255,255,255,0)),
+                url('img/muebles-bg.png') center center/cover no-repeat;
+    height: 100%;
+}
+
+/* Contenido */
+.furniture-info {
+    width: 50%;
+    background-color: #fff;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+.furniture-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #5D4B8C;
+    margin-bottom: 15px;
+}
+
+.furniture-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.furniture-info h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.furniture-info .category {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.furniture-info .rating {
+    font-size: 14px;
+    color: #FFD700;
+    margin-bottom: 5px;
+}
+
+.furniture-info .location {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-view-catalog {
+    background-color: #5D4B8C;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Modal Herramientas */
+.tools-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.tools-content {
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px 20px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.tools-content h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #5D4B8C;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.tool-btn {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 10px 5px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.tool-btn:hover {
+    background: #e0e0e0;
+}
+
+.btn-close-tools {
+    background: #5D4B8C;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+
+
+
+#splash-screen {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ffffff;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: opacity 0.5s ease;
+}
+
+.splash-content {
+    text-align: center;
+}
+
+.splash-logo {
+    width: 100px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.splash-text {
+    color: #5D4B8C;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.splash-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e0e0e0;
+    border-top: 4px solid #5D4B8C;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
