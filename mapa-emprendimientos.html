@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TOPE - Sección</title>
+    <link rel="stylesheet" href="styles_empr.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <a href="index.html"><img src="img/logo.svg" alt="TOPE" class="splash-logo"></a>
+            <div class="splash-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <a href="#"><img src="img/logo.svg" alt="TOPE" class="splash-logo"></a>
+        </div>
+    </header>
+
+    <!-- Contenido de la sección -->
+    <main>
+        <div class="feed">
+            <section id="categorias-emprendimientos" class="category-map-section">
+            <h2 class="section-title">🔍 ¿Qué buscás hoy?</h2>
+            <div class="category-cards">
+                <div class="category-card" data-category="pasteleria">🎂 Pastelería</div>
+                <div class="category-card" data-category="barberia">💈 Barbería</div>
+                <div class="category-card" data-category="textil">👗 Textil</div>
+                <div class="category-card" data-category="mecanico">🛠 Mecánico</div>
+                <div class="category-card" data-category="cosmetica">🌿 Cosmética</div>
+            </div>
+            <div id="mapa-emprendimientos" class="map-container"></div>
+            </section>
+        </div>
+    </main>
+    
+
+    <!-- Modal de Herramientas -->
+    <div class="tools-modal" id="tools-modal">
+        <div class="tools-content">
+            <h3>🧰 Herramientas para Emprendedores</h3>
+            <div class="tools-grid">
+                <button class="tool-btn">🧮 Costos</button>
+                <button class="tool-btn">🛒 Tienda</button>
+                <button class="tool-btn">🌐 Web</button>
+                <button class="tool-btn">📦 Inventario</button>
+                <button class="tool-btn">👥 Clientes</button>
+                <button class="tool-btn">🔗 Proveedores</button>
+                <button class="tool-btn">📊 Reportes</button>
+                <button class="tool-btn">📅 Agenda</button>
+                <button class="tool-btn">🧾 Facturas</button>
+                <button class="tool-btn">💬 Chat IA</button>
+                <button class="tool-btn">🎯 Objetivos</button>
+                <button class="tool-btn">📈 Analíticas</button>
+            </div>
+            <button class="btn-close-tools" id="close-tools">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Navegación inferior -->
+    <nav class="bottom-nav">
+        <a href="mapa-emprendimientos.html"><div class="nav-item" data-section="express">
+            <i class="fas fa-motorcycle"></i>
+            <span>Pedidos Rápidos</span>
+        </div></a>
+        <a href="index.html"><div class="nav-item" data-section="shopping">
+            <i class="fas fa-store"></i>
+            <span>Explorar</span>
+        </div></a>
+        <div class="nav-item" data-section="tools" id="open-tools">
+            <i class="fas fa-tools"></i>
+            <span>Herramientas</span>
+        </div>
+        <div class="nav-item" data-section="perfil">
+            <i class="fas fa-user-circle"></i>
+            <span>Mi Perfil</span>
+        </div>
+    </nav>
+
+    <!-- Scripts -->
+
+    <!-- Leaflet CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        const mapa = L.map('mapa-emprendimientos').setView([-34.6037, -58.3816], 12); // Buenos Aires
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap'
+        }).addTo(mapa);
+
+        const marcadores = {
+            pasteleria: [
+                { nombre: "Mago's Cakes", emoji: '🎂', coords: [-34.6037, -58.3816] },
+                { nombre: "Dulce Tentación", emoji: '🧁', coords: [-34.609, -58.384] }
+            ],
+            barberia: [
+                { nombre: "El Recoorte", emoji: '💈', coords: [-34.6085, -58.377] },
+                { nombre: "Barber Kings", emoji: '✂️', coords: [-34.611, -58.382] }
+            ],
+            textil: [
+                { nombre: "Nova Apparel", emoji: '👕', coords: [-34.606, -58.379] },
+                { nombre: "Sofía Boutique", emoji: '👗', coords: [-34.602, -58.383] }
+            ],
+            mecanico: [
+                { nombre: "Torque Plus", emoji: '🚗', coords: [-34.6105, -58.388] },
+                { nombre: "Rueda Libre", emoji: '🔧', coords: [-34.615, -58.390] }
+            ],
+            cosmetica: [
+                { nombre: "Natura Pura", emoji: '🌸', coords: [-34.600, -58.390] },
+                { nombre: "Eco Belleza", emoji: '🧴', coords: [-34.605, -58.395] }
+            ]
+        };
+
+        const renderMarkers = (categoria) => {
+            mapa.eachLayer(layer => {
+                if (layer instanceof L.Marker) mapa.removeLayer(layer);
+            });
+
+            marcadores[categoria].forEach(emp => {
+                L.marker(emp.coords).addTo(mapa)
+                    .bindPopup(`${emp.emoji} <strong>${emp.nombre}</strong>`);
+            });
+        };
+
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const cat = card.getAttribute('data-category');
+                renderMarkers(cat);
+                document.getElementById('mapa-emprendimientos').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const openTools = document.getElementById("open-tools");
+            const closeTools = document.getElementById("close-tools");
+            const modal = document.getElementById("tools-modal");
+
+            openTools.addEventListener("click", () => modal.style.display = "flex");
+            closeTools.addEventListener("click", () => modal.style.display = "none");
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) modal.style.display = "none";
+            });
+        });
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const splash = document.getElementById('splash-screen');
+                splash.style.opacity = '0';
+                setTimeout(() => splash.style.display = 'none', 500);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
